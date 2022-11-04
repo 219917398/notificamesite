@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+        <title>Notificame | Administración</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/sorttable.js"></script>
+        <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"/>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+           
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <img src="img/logo_naxu.png" alt="logo naxu" />
+                    
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="indexx.html" target="_self">
+                            <img src="img/menu/logo_home_hover.svg" alt="home" />
+                            <p>Inicio</p>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="#">
+                            <img src="img/menu/logo_recibonomina.svg" alt="recibos de nomina" />
+                            <p>Avisos administración</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="av_residentes.html" target="_self">
+                            <img src="img/menu/logo_creditos.svg" alt="residentes" />
+                            <i class="fa fa-chevron-down"></i>
+                            <p>Avisos residentes</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="minutas.html">
+                            <img src="img/menu/logo_vacaciones.svg" alt="vacaciones" />
+                            <p>Minutas</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="agenda.html">
+                            <img src="img/menu/logo_agenda.svg" alt="vacaciones" />
+                            <p>Agenda</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="incidencias.html">
+                            <img src="img/menu/logo_Beneficios.svg" alt="beneficios" />
+                            <p>Reporte de incidencias</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="loging.html" target="self">
+                            <p>Salir</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="row barraMovil">
+                        <div class="col-2 col-md-2 iconoAling">
+                            <button type="button" class="sidebarCollapse">
+                                <img src="img/menu/btn_menu.svg" alt="menu btn" />
+                            </button>
+                        </div>
+                        <div class="col-7 col-md-8"></div>
+                        <div class="col-2 col-md-2">
+                            <img src="img/companyname_loging.png" alt="Logo naxus" class="naxus_logo_movil" />
+                        </div>
+                    </div>
+                    <div class="row barraDesktop">
+                        <div class="col-10 col-md-10">
+                            <h1 class="Bienv">¡Bienvenido!</h1>
+                            <p class="Usua">Luis Enrique Beltrán Rivera (Administrador)</p>
+                        </div>
+                        <div class="col-1 col-md-2">
+                            <img src="img/companyname_loging.png" alt="Logo de company" />
+                        </div>
+                    </div>
+                <!-- inicia cuerpo del documento -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <table id="comments" class="sortable">
+                                <thead>
+                                    <tr>
+                                        <th class="Noborder"><p class="titleSeg">ASUNTO DEL AVISO</p></th>
+                                        <th class="Noborder"><p class="titleSeg">TIPO</p></th>
+                                        <th class="Noborder"><p class="titleSeg">MENSAJE</p></th>
+                                        <!--<th class="Noborder"><p class="titleSeg">VISUALIZAR</p></th> -->
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                </tbody>
+                            </table>
+                            <br>
+                            <a id="modal-otroseg02" href="#modal-container-otroseg01" data-toggle="modal" role="button" class="btn btn-primary Benef">Crear un aviso nuevo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal-container-otroseg01" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content AdqOtroSegModal01">
+                    <div class="row DetalleProductContact">
+                       
+                        <div class="col-12 col-md-2 col-lg-1">
+                        </div>
+                        <div class="col-12 col-md-8 col-lg-10">
+                            <h3>
+                                Publica un aviso para todos los cóndominios
+                            </h3>
+                            <p>
+                               Recuerda que tambien puedes adjuntar un documento
+                            </p>
+                           
+                            <form role="form1" action="av_adminisracion.html" method="POST" id="form1">
+                                <div class="form-group">
+                                    
+                                    <label for="exampleInputEmail1">
+                                        Asunto
+                                    </label>
+                                    <input type="name" class="form-control" id="notification" name="notification" />
+                                </div>
+                            
+                                <div class="form-group">
+                                    
+                                   
+                                    <select class="form-control" id="type" name="type">
+                                        <option value="Tipo de aviso">Tipo de aviso</option>
+                                        <option value="Acuerdo">Acuerdo</option>
+                                        <option value="Minuta">Minuta</option>
+                                        <option value="Circular">Circular</option>
+                                        <option value="Notificacion">Notificación</option>
+                                    </select>
+                                </div>
+                                
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Mensaje</label>
+                                    <textarea class="form-control" id="message" rows="10" name="message"></textarea>
+                                </div>
+                                
+                               <div class="row">
+                                <div class="col-12 col-md-6 col-lg-6"></div>
+
+                               <!-- <div>
+                                    <a href="#"><img src="img/iconopdf.svg" alt="img pdf descragable" /></a>
+                                </div>
+                                -->
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <button type="button" class="btn btn-block btn-lg btn-primary" id="btnRegisterComment" data-dismiss="modal">Publicar</button>
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-12 col-md-2 col-lg-1">
+                        </div>
+                    
+
+                </div>
+
+                    <div class="modal-footer">     
+                        <a href="#" data-dismiss="modal">Cancelar</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".sidebarCollapse").on("click", function () {
+                    $("#sidebar").toggleClass("active");
+                });
+            });
+        </script>
+    </body>
+</html>
+
+<script>
+    $(document).ready(function(){
+       $('#btnRegisterComment').click(function(){
+           var datos = $('#form1').serialize();
+           $.ajax({
+               type: "POST",
+               url: "createNotification.php",
+               data: datos,
+               success: function(data){
+                   if(data === '' ){
+                    alert('REGISTRO NO EXITOSO');
+                   } else {
+                    getAllComents();
+                   }
+               } 
+           });  
+       });
+    });
+</script>
+
+<script>
+
+$(window).on("load", function(){
+            getAllComents();
+    });
+
+    function getAllComents() {
+        $.ajax({
+               type: "POST",
+               url: "allComents.php",
+               dataType: "json",
+               success: function(data){
+                let tableBody = document.getElementById('tbody');
+                $('#comments > tbody').empty();  
+                for (var key in data) {
+                    $("#comments").append('<tr>' + 
+                    '<td data-column="Nombre" class="RightBorder"><p class="itemSeg">' + data[key].notification + '</td>'+
+                    '<td data-column="Seguro" class="RightBorder">' + data[key].type + '</td>'+
+                    '<td data-column="Seguro" class="RightBorder">' + data[key].message + '</td>'+ '</tr>');
+                }              
+               } 
+           });
+    }
+</script>
